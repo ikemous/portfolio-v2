@@ -1,0 +1,34 @@
+.code {
+  color: #abb2bf;
+}
+.code-keywords{
+  color:  #c678dd;
+}
+.code-const-variable {
+  color: #d19a66;
+}
+.code-let-variable {
+  color: #abb2bf;
+}
+.code-strings {
+  color: #98c379;
+}
+.code-string-literal {
+  color: #be5046;
+}
+.code-console {
+  color: #e5c07b;
+}
+.code-log {
+  color: #56b6c2;
+}
+.navbar-toggler-icon {
+  color: purple;
+}
+.card-column {
+  padding: 15px;
+}
+.website-link-button {
+  position: absolute;
+  right: 13px;
+}
