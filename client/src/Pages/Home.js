@@ -26,7 +26,8 @@ export default function Home() {
                 </Col>
                 <Col xs={{span: 12, order: 1}} lg={{span: 4, order: 2}} className="d-flex justify-content-center">
                     <div>
-                        <Image src="./Images/050-mouse.png" alt="mouse icon" fluid style={{maxHeight: "35vh", maxWidth: "70vw"}}/>
+                        <Image src="./Images/050-mouse.png" alt="mouse icon from https://www.flaticon.com" fluid style={{maxHeight: "35vh", maxWidth: "70vw"}}/>
+                        <p style={{color: "lightgray", fontSize: ".6rem"}}>Icon from <a style={{color: "lightgray"}} href="https://www.flaticon.com">https://www.flaticon.com</a></p>
                         <h1 className="text-right" style={{color: "white"}}>Ikemous</h1>
                     </div>
                 </Col>
