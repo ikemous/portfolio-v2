@@ -56,12 +56,12 @@ export default function Portfolio() {
                 </Modal.Body>
                 <Modal.Footer>
                     <a href={modalProject.gitlink} rel="noopener noreferrer" target="_blank" style={{position: "absolute", left: "5px"}}>
-                        <Button variant="secondary" onClick={closeModal}>
+                        <Button style={{background: "purple"}} variant="secondary" onClick={closeModal}>
                             <FaCode />
                         </Button>
                     </a>
                     <a href={modalProject.weblink} rel="noopener noreferrer" target="_blank">
-                        <Button variant="primary" onClick={closeModal}>
+                        <Button  style={{background: "purple"}} variant="primary" onClick={closeModal}>
                             <FaInternetExplorer />    
                         </Button>
                     </a>
