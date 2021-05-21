@@ -1,10 +1,12 @@
 import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
 import PageContainer from "../Components/PageContainer";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
     return (
         <PageContainer>
+            <
             <Row style={{minHeight: "85vh"}} className="justify-content-center align-items-center">
                 <Col xs={{span: 12, order: 2}} lg={{span:8, order: 1}} className="d-flex justify-content-center">
                     <code className="code">
