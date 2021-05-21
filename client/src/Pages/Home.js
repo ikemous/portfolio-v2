@@ -6,7 +6,11 @@ import { Helmet } from "react-helmet";
 export default function Home() {
     return (
         <PageContainer>
-            <
+            <Helmet>
+                <title>Ikemous | Home</title>
+                <meta name="description" content="Ikemous home page" />
+                <meta name="keywords" content="Ike, Barranco, Ikemous, Home Page, Projects, Coding" />
+            </Helmet>
             <Row style={{minHeight: "85vh"}} className="justify-content-center align-items-center">
                 <Col xs={{span: 12, order: 2}} lg={{span:8, order: 1}} className="d-flex justify-content-center">
                     <code className="code">

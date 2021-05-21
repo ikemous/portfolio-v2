@@ -5,6 +5,7 @@ import PageContainer from "../Components/PageContainer";
 import ProjectCard from "../Components/ProjectCard";
 import { v4 as uuidv4 } from "uuid";
 import projects from "../utils/projects";
+import { Helmet } from "react-helmet";
 
 
 export default function Portfolio() {
@@ -29,6 +30,11 @@ export default function Portfolio() {
 
     return (
         <PageContainer>
+            <Helmet>
+                <title>Ikemous | Projects</title>
+                <meta name="description" content="Ikemous home page" />
+                <meta name="keywords" content="Ike, Barranco, Ikemous, Home Page, Projects, Coding" />
+            </Helmet>
             <Row className="justify-content-center align-items-center">
                 {
                     projects.map(project =>
