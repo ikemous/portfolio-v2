@@ -38,7 +38,7 @@ export default function Portfolio() {
             <Row className="justify-content-center align-items-center">
                 {
                     projects.map(project =>
-                        <Col key={uuidv4()} xs={12} md={6} lg={3} className="card-column"
+                        <Col key={uuidv4()} xs={12} sm={6} md={4} lg={3} className="card-column"
                         onClick={() => handleProjectClick(project)} style={{padding: "10px"}} >
                             <ProjectCard name={project.name} 
                                 description={project.description} 
