@@ -14,7 +14,7 @@ export default [
         gitlink: "https://github.com/ikemous/React-Cat-Or-Dog", 
         weblink: "https://aninder.herokuapp.com", 
         src: "./Images/aninder.PNG",
-        languages: ["React", "Typescript", "Redux", "Node", "CSS", "MongoDB"],
+        languages: ["React", "Typescript", "Redux", "Node", "CSS", "MongoDB", "API"],
     },
     {
         name: "Tic-Tac-Toe",
