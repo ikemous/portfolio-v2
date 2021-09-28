@@ -10,24 +10,6 @@ import { Helmet } from "react-helmet";
 
 export default function Portfolio() {
 
-    const [modalProject, setModalProject] = useState({
-        name: "HALP",
-        description: "Ticket Management System",
-        gitlink: "", 
-        weblink: "", 
-        src: "./Images/halp.PNG ",
-        languages: "",
-    });
-    
-    const [showModal, setShowModal] = useState(false);
-
-    const closeModal = () => setShowModal(false);
-
-    const handleProjectClick = (project) => {
-        setModalProject(project);
-        setShowModal(true);
-    };
-
     return (
         <PageContainer>
             <Helmet>
@@ -35,45 +17,50 @@ export default function Portfolio() {
                 <meta name="description" content="Ikemous home page" />
                 <meta name="keywords" content="Ike, Barranco, Ikemous, Home Page, Projects, Coding" />
             </Helmet>
-            <Row className="justify-content-center align-items-center">
+            <Row className="justify-content-center align-items-center" style={{maxHeight: "88vh", overflowY: "scroll"}}>
                 {
-                    projects.map(project =>
-                        <Col key={uuidv4()} xs={12} sm={6} md={4} lg={3} className="card-column"
-                        onClick={() => handleProjectClick(project)} style={{padding: "10px"}} >
-                            <ProjectCard name={project.name} 
-                                description={project.description} 
-                                src={project.src}
-                            />
-                        </Col>
+                    projects.map(project => 
+                        <Row key={uuidv4()} style={{marginBottom:"3vh"}}>
+                            <Col 
+                                xs={12} md={4} lg={3} 
+                                style={{
+                                    height: "20vh",
+                                    background: `url(${project.src})`,
+                                    backgroundSize: "cover",
+                                    backgroundRepeat:"no-repeat",
+                                }}
+                            >
+                            </Col>
+                            <Col xs={12} md={8} lg={9}>
+                                <h2 className="text-center code-const-variable">{project.name}</h2>
+                                <p className="code-strings">
+                                    {project.description}
+                                </p>
+                                <p className="code-strings">
+                                    Languages Used: <span className="code-log">{project.languages.sort().join(", ")}</span>
+                                </p>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <a href={project.gitlink} rel="noopener noreferrer" target="_blank" style={{width: "35%", marginRight: "2vw"}}>
+                                        <Button style={{background: "purple", width: "100%"}} variant="secondary">
+                                            <FaCode />
+                                        </Button>
+                                    </a>
+                                    {
+                                        project.weblink? 
+                                            <a href={project.weblink} rel="noopener noreferrer" target="_blank" style={{width: "35%"}}>
+                                                <Button ariaLabel={`Button for ${project.name} website link`} style={{background: "purple", width: "100%"}} variant="primary">
+                                                    <FaInternetExplorer />    
+                                                </Button>
+                                            </a>
+                                            :
+                                            <></>
+                                    }
+                                </div>
+                            </Col>
+                        </Row>    
                     )
                 }
             </Row>
-
-            <Modal show={showModal} onHide={closeModal} centered>
-                <Modal.Header>
-                    <Modal.Title>{modalProject.name}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Image src={modalProject.src} alt="project preview" fluid />
-                    {modalProject.description}
-                </Modal.Body>
-                <Modal.Body>
-                    {modalProject.languages}
-                </Modal.Body>
-                <Modal.Footer>
-                    <a href={modalProject.gitlink} rel="noopener noreferrer" target="_blank" style={{position: "absolute", left: "5px"}}>
-                        <Button style={{background: "purple"}} variant="secondary" onClick={closeModal}>
-                            <FaCode />
-                        </Button>
-                    </a>
-                    <a href={modalProject.weblink} rel="noopener noreferrer" target="_blank">
-                        <Button  style={{background: "purple"}} variant="primary" onClick={closeModal}>
-                            <FaInternetExplorer />    
-                        </Button>
-                    </a>
-
-                </Modal.Footer>
-            </Modal>
         </PageContainer>
     );
 };
