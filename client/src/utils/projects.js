@@ -1,6 +1,14 @@
 
 export default [
     {
+        name: "Burger Logger",
+        description: "Unbeatable Tic-Tac-Toe application made using Visual Studio. Try going first or second, you won't beat this one!",
+        gitlink: "https://github.com/ikemous/GUI-team-generator",
+        weblink: "https://dev-team-generator.herokuapp.com", 
+        src: "./images/burgerChomper.PNG",
+        languages: ["Javascript", "HTML", "CSS"],
+    },
+    {
         name: "Tic-Tac-Toe",
         description: "Unbeatable Tic-Tac-Toe application made using Visual Studio. Try going first or second, you won't beat this one!",
         gitlink: "https://github.com/ikemous/TicTacToe",
